@@ -1,0 +1,54 @@
+{% extends "base.html" %} {% block content %}
+<div>
+    <section>
+        <div class="container">
+            <div class="user signinBx">
+                <div class="imgBx">
+                    <img
+                        src="https://images.unsplash.com/photo-1526925539332-aa3b66e35444?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=701&q=80"
+                        alt=""
+                    />
+                </div>
+                <div class="formBx">
+                    <form method="post">
+                        <h2>Register</h2>
+                        <input
+                            type="text"
+                            name="username"
+                            value=""
+                            placeholder="Username"
+                            required
+                        />
+                        <input
+                            type="email"
+                            name="email"
+                            value=""
+                            placeholder="Email"
+                            required
+                        />
+                        <input
+                            type="number"
+                            name="age"
+                            value=""
+                            placeholder="Age"
+                            required
+                        />
+                        <input
+                            type="password"
+                            name="password"
+                            value=""
+                            placeholder="Password"
+                            required
+                        />
+                        <input type="submit" name="userSignup" value="Signup" />
+
+                        <p class="signup">
+                            <a href="/login">Login</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
