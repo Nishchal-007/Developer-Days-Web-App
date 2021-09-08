@@ -7,7 +7,7 @@ PEOPLE_FOLDER = os.path.join('static','styles')
 
 app = Flask(__name__)
 mysql = MySQL()
- 
+app.secret_key = 'your_secret_key'
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = '*********'
