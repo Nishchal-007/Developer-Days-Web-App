@@ -42,7 +42,7 @@ CREATE PROCEDURE `sp_userCreate`(
         IN p_password TEXT
     )
 BEGIN
-        if ( select exists (select 1 from auths_table where username = p_username) ) THEN
+        if ( select exists (select 1 from users where username = p_username) ) THEN
             select 'Username Exists !!';
         ELSE
             insert into users (
