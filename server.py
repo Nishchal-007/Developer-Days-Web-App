@@ -1,7 +1,8 @@
-from flask import Flask, render_template, json, request
+from flask import Flask, render_template, json, request, session, redirect, url_for
 import os
 from werkzeug.security import generate_password_hash, check_password_hash
 from flaskext.mysql import MySQL
+from __init__ import mysql_password
 
 PEOPLE_FOLDER = os.path.join('static','styles')
 
@@ -10,7 +11,7 @@ mysql = MySQL()
 app.secret_key = 'your_secret_key'
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = '*********'
+app.config['MYSQL_DATABASE_PASSWORD'] = mysql_password
 app.config['MYSQL_DATABASE_DB'] = 'test'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
