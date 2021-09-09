@@ -21,7 +21,7 @@ or
 $ pip3 install -r requirements.txt
 ```
 
-5. Navigate tot the project where server.py file is located and run it . . . .
+5. Navigate to the project where server.py file is located and run it . . . .
 ```
 $ python server.py
 ```
