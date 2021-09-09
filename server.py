@@ -20,19 +20,19 @@ mysql.init_app(app)
 def main():
     return render_template('home.html')
 
-@app.route("/login")
-def Login_View():
+@app.route("/verify")
+def Verify_View():
     return render_template('login.html')
 
-@app.route("/signup")
-def Signup_View():
+@app.route("/details")
+def Details_View():
     return render_template('signup.html')
 
 if __name__ == "__main__":
     app.run(port=9001)
   
 """
-STORED PROCEDURE FOR USERS SIGNUP
+STORED PROCEDURE FOR USER DETAILS
 
 DELIMITER $$
 CREATE PROCEDURE `sp_userCreate`(
